@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-Hans">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>增删查改</title>
+</head>
+
+<body>
+    <h1>增删查改</h1>
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-link" id="nav-post-tab" data-bs-toggle="tab" href="#nav-post" role="tab"
+                aria-controls="nav-post" aria-selected="false">增</a>
+            <a class="nav-link" id="nav-delete-tab" data-bs-toggle="tab" href="#nav-delete" role="tab"
+                aria-controls="nav-delete" aria-selected="false">删</a>
+            <a class="nav-link active" id="nav-get-tab" data-bs-toggle="tab" href="#nav-get" role="tab"
+                aria-controls="nav-get" aria-selected="true">查</a>
+            <a class="nav-link" id="nav-put-tab" data-bs-toggle="tab" href="#nav-put" role="tab" aria-controls="nav-put"
+                aria-selected="false">改</a>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade" id="nav-post" role="tabpanel" aria-labelledby="nav-post-tab">...</div>
+        <div class="tab-pane fade" id="nav-delete" role="tabpanel" aria-labelledby="nav-delete-tab">...</div>
+        <div class="tab-pane fade show active" id="nav-get" role="tabpanel" aria-labelledby="nav-get-tab">
+            <form class="row align-items-center">
+                <div class="col-auto">
+                    <label class="form-label" for="get-key">键</label>
+                </div>
+                <div class="col-auto">
+                    <input type="text" class="form-control" id="get-key" name="key" placeholder="%">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+            {{ .result }}
+        </div>
+        <div class="tab-pane fade" id="nav-put" role="tabpanel" aria-labelledby="nav-put-tab">...</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

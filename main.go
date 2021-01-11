@@ -25,5 +25,13 @@ func main() {
 		c.HTML(http.StatusOK, "index.tmpl.html", nil)
 	})
 
+	router.GET("/kv", func(c *gin.Context) {
+		key := c.Query("key")
+		if key == "" {
+			key = "%"
+		}
+		c.HTML(http.StatusOK, "kv.tmpl.html", gin.H{"result": key})
+	})
+
 	router.Run(":" + port)
 }
